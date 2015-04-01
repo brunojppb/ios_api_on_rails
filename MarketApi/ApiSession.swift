@@ -28,7 +28,30 @@ class ApiSession {
 
     }
     
-    var current_user : User?
+    var _current_user : User?
+    
+    var current_user : User? {
+        get {
+            if _current_user == nil {
+                let userInfo = NSUserDefaults.standardUserDefaults().objectForKey("user") as [String : AnyObject]?
+                if let user = userInfo {
+                    let id = user["id"]! as Int
+                    let email = user["email"]! as String
+                    let password = user["password"] as String
+                    let auth_token = user["auth_token"] as String
+                    let product_ids = user["product_ids"] as [Int]
+                    let loggedUser = User(id: id, email: email, password: password, auth_token: auth_token, product_ids: product_ids)
+                    _current_user = loggedUser
+                }
+            }
+            
+            return _current_user
+        }
+        
+        set {
+            _current_user = newValue
+        }
+    }
     
     func logInUser(email: String, password: String, completionHandler: (user: User?, error: NSError?) -> Void) {
         let session : [String : AnyObject] = [
@@ -45,12 +68,16 @@ class ApiSession {
                 if let errors = json["errors"].string {
                     completionHandler(user: nil, error: nil)
                 }
-                else if let user = json["user"].dictionaryObject {
+                else if var user = json["user"].dictionaryObject {
                     let id = user["id"] as Int
                     let email = user["email"] as String
                     let auth_token = user["auth_token"] as String
                     let loggedUser = User(id: id, email: email, password: password, auth_token: auth_token)
                     self.current_user = loggedUser
+                    // save the logged in user with password
+                    // We need the password to update the user's auth_token
+                    user["password"] = password
+                    NSUserDefaults.standardUserDefaults().setObject(user, forKey: "user")
                     completionHandler(user: self.current_user, error: nil)
                 }
             }

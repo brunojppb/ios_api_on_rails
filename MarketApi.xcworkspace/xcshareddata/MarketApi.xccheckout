@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4F953E75-7258-4562-BC5F-97CA7F89199B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MarketApi</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>41FF0A0F717D787DC056862268700FDBBD65E41E</key>
+		<string>github.com:brunojppb/ios_api_on_rails.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MarketApi.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>41FF0A0F717D787DC056862268700FDBBD65E41E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:brunojppb/ios_api_on_rails.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>41FF0A0F717D787DC056862268700FDBBD65E41E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>41FF0A0F717D787DC056862268700FDBBD65E41E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MarketApi</string>
+		</dict>
+	</array>
+</dict>
+</plist>

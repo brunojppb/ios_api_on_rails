@@ -10,7 +10,6 @@
 		92ABF76D1ACADAF30098F99F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF76C1ACADAF30098F99F /* User.swift */; };
 		92ABF76F1ACAF94B0098F99F /* ApiSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF76E1ACAF94B0098F99F /* ApiSession.swift */; };
 		92ABF7711ACAF9710098F99F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF7701ACAF9710098F99F /* Constants.swift */; };
-		92ABF7741ACB22000098F99F /* UserProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF7731ACB22000098F99F /* UserProductsViewController.swift */; };
 		92B041D91ACB231D0065CFDA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B041D81ACB231D0065CFDA /* Product.swift */; };
 		92C43F641AC99D2E00440EA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43F631AC99D2E00440EA0 /* AppDelegate.swift */; };
 		92C43F661AC99D2E00440EA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43F651AC99D2E00440EA0 /* LoginViewController.swift */; };
@@ -18,6 +17,7 @@
 		92C43F6B1AC99D2E00440EA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C43F6A1AC99D2E00440EA0 /* Images.xcassets */; };
 		92C43F6E1AC99D2E00440EA0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C43F6C1AC99D2E00440EA0 /* LaunchScreen.xib */; };
 		92C43F7A1AC99D2F00440EA0 /* MarketApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43F791AC99D2F00440EA0 /* MarketApiTests.swift */; };
+		92F36A711ACC3F03008B3A43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F36A701ACC3F03008B3A43 /* ProfileViewController.swift */; };
 		DE49579C53D3EBCAC0C214D9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A5B97AFD845FD0E9FB5968 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,6 @@
 		92ABF76C1ACADAF30098F99F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92ABF76E1ACAF94B0098F99F /* ApiSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiSession.swift; sourceTree = "<group>"; };
 		92ABF7701ACAF9710098F99F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		92ABF7731ACB22000098F99F /* UserProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProductsViewController.swift; sourceTree = "<group>"; };
 		92B041D81ACB231D0065CFDA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		92C43F5E1AC99D2E00440EA0 /* MarketApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C43F621AC99D2E00440EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,8 @@
 		92C43F731AC99D2F00440EA0 /* MarketApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C43F781AC99D2F00440EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92C43F791AC99D2F00440EA0 /* MarketApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketApiTests.swift; sourceTree = "<group>"; };
+		92F36A3A1ACC3068008B3A43 /* MarketApi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarketApi-Bridging-Header.h"; sourceTree = "<group>"; };
+		92F36A701ACC3F03008B3A43 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D4F881567831E2EE8A1EA95A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +95,7 @@
 			children = (
 				92ABF76E1ACAF94B0098F99F /* ApiSession.swift */,
 				92ABF7701ACAF9710098F99F /* Constants.swift */,
+				92F36A3A1ACC3068008B3A43 /* MarketApi-Bridging-Header.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -121,12 +123,10 @@
 		92C43F601AC99D2E00440EA0 /* MarketApi */ = {
 			isa = PBXGroup;
 			children = (
-				92ABF7721ACB1FA40098F99F /* Util */,
 				92ABF76B1ACADAD60098F99F /* Model */,
-				92C43F631AC99D2E00440EA0 /* AppDelegate.swift */,
-				92C43F651AC99D2E00440EA0 /* LoginViewController.swift */,
-				92ABF7731ACB22000098F99F /* UserProductsViewController.swift */,
-				92C43F671AC99D2E00440EA0 /* Main.storyboard */,
+				92F36A3E1ACC33F7008B3A43 /* View */,
+				92F36A3F1ACC3403008B3A43 /* Controller */,
+				92ABF7721ACB1FA40098F99F /* Util */,
 				92C43F611AC99D2E00440EA0 /* Supporting Files */,
 			);
 			path = MarketApi;
@@ -135,6 +135,7 @@
 		92C43F611AC99D2E00440EA0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				92C43F631AC99D2E00440EA0 /* AppDelegate.swift */,
 				92C43F6A1AC99D2E00440EA0 /* Images.xcassets */,
 				92C43F6C1AC99D2E00440EA0 /* LaunchScreen.xib */,
 				92C43F621AC99D2E00440EA0 /* Info.plist */,
@@ -157,6 +158,23 @@
 				92C43F781AC99D2F00440EA0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92F36A3E1ACC33F7008B3A43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92C43F671AC99D2E00440EA0 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		92F36A3F1ACC3403008B3A43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92C43F651AC99D2E00440EA0 /* LoginViewController.swift */,
+				92F36A701ACC3F03008B3A43 /* ProfileViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		DDBD66208823BF99BFF91BD8 /* Frameworks */ = {
@@ -320,9 +338,9 @@
 			files = (
 				92ABF7711ACAF9710098F99F /* Constants.swift in Sources */,
 				92ABF76F1ACAF94B0098F99F /* ApiSession.swift in Sources */,
-				92ABF7741ACB22000098F99F /* UserProductsViewController.swift in Sources */,
 				92C43F661AC99D2E00440EA0 /* LoginViewController.swift in Sources */,
 				92C43F641AC99D2E00440EA0 /* AppDelegate.swift in Sources */,
+				92F36A711ACC3F03008B3A43 /* ProfileViewController.swift in Sources */,
 				92ABF76D1ACADAF30098F99F /* User.swift in Sources */,
 				92B041D91ACB231D0065CFDA /* Product.swift in Sources */,
 			);
@@ -448,9 +466,12 @@
 			baseConfigurationReference = D4F881567831E2EE8A1EA95A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MarketApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarketApi/MarketApi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -459,9 +480,11 @@
 			baseConfigurationReference = 1F79CAA2DB68AECDEEB7EB82 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MarketApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarketApi/MarketApi-Bridging-Header.h";
 			};
 			name = Release;
 		};

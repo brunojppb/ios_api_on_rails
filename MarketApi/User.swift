@@ -14,12 +14,16 @@ class User : Printable {
     var email : String
     var password : String
     var auth_token : String?
+    var products : [Product]
+    var product_ids : [Int]
     
-    required init(id: Int, email: String, password: String, auth_token: String?) {
+    required init(id: Int, email: String, password: String, auth_token: String?, product_ids: [Int] = [Int](), products: [Product] = [Product]()) {
         self.id = id
         self.email = email
         self.auth_token = auth_token
         self.password = password
+        self.product_ids = product_ids
+        self.products = products
     }
     
     class func endpointForID(id: Int) -> String {
@@ -31,7 +35,7 @@ class User : Printable {
     }
     
     var description : String {
-        return "id: \(id)\nEmail: \(email)\nauth_token: \(auth_token!)"
+        return "id: \(id)\nEmail: \(email)\nauth_token: \(auth_token!)\nproduct_ids: \(product_ids)"
     }
     
 }
