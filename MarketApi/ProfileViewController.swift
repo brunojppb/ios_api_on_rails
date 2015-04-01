@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
