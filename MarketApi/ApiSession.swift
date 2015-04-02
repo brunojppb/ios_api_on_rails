@@ -72,7 +72,8 @@ class ApiSession {
                     let id = user["id"] as Int
                     let email = user["email"] as String
                     let auth_token = user["auth_token"] as String
-                    let loggedUser = User(id: id, email: email, password: password, auth_token: auth_token)
+                    let product_ids = user["product_ids"] as [Int]
+                    let loggedUser = User(id: id, email: email, password: password, auth_token: auth_token, product_ids: product_ids)
                     self.current_user = loggedUser
                     // save the logged in user with password
                     // We need the password to update the user's auth_token

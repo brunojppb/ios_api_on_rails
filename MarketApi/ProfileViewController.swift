@@ -8,7 +8,14 @@
 
 import UIKit
 
-class ProfileViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: UITableViewController {
+    
+    @IBOutlet weak var user_email: UILabel!
+    @IBOutlet weak var user_auth_token: UILabel!
+    @IBOutlet weak var user_number_of_products: UILabel!
+    @IBOutlet weak var email_textfield: UITextField!
+    
+    
     
 
     override func viewDidLoad() {
@@ -16,21 +23,23 @@ class ProfileViewController: UITableViewController, UITableViewDataSource, UITab
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateUserProfile()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateUserProfile() {
+        if let current_user = ApiSession.sharedInstance.current_user {
+            self.user_email.text = current_user.email
+            self.user_auth_token.text = current_user.auth_token
+            self.user_number_of_products.text = "\(current_user.product_ids.count)"
+        }
     }
-    */
 
 }

@@ -50,6 +50,10 @@ class LoginViewController: UIViewController {
                 self.dismissViewControllerAnimated(true, completion: nil)
                 
             }
+            else if error != nil {
+                self.removeSpinner()
+                self.showAlertMessage("Server error")
+            }
         }
     }
     

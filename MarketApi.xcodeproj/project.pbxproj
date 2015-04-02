@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		928F75A81ACD85AD00439E6A /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F75A71ACD85AD00439E6A /* ApiModel.swift */; };
+		92ABB7D31ACDCCAE00D430F7 /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABB7D21ACDCCAE00D430F7 /* NewProductViewController.swift */; };
 		92ABF76D1ACADAF30098F99F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF76C1ACADAF30098F99F /* User.swift */; };
 		92ABF76F1ACAF94B0098F99F /* ApiSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF76E1ACAF94B0098F99F /* ApiSession.swift */; };
 		92ABF7711ACAF9710098F99F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ABF7701ACAF9710098F99F /* Constants.swift */; };
+		92AF505A1ACD94A700CE283D /* UserProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF50591ACD94A700CE283D /* UserProductsViewController.swift */; };
+		92AF505D1ACD979100CE283D /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF505C1ACD979100CE283D /* ProductCell.swift */; };
 		92B041D91ACB231D0065CFDA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B041D81ACB231D0065CFDA /* Product.swift */; };
 		92C43F641AC99D2E00440EA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43F631AC99D2E00440EA0 /* AppDelegate.swift */; };
 		92C43F661AC99D2E00440EA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43F651AC99D2E00440EA0 /* LoginViewController.swift */; };
@@ -34,9 +38,13 @@
 /* Begin PBXFileReference section */
 		1F79CAA2DB68AECDEEB7EB82 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		52A5B97AFD845FD0E9FB5968 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		928F75A71ACD85AD00439E6A /* ApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		92ABB7D21ACDCCAE00D430F7 /* NewProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		92ABF76C1ACADAF30098F99F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92ABF76E1ACAF94B0098F99F /* ApiSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiSession.swift; sourceTree = "<group>"; };
 		92ABF7701ACAF9710098F99F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		92AF50591ACD94A700CE283D /* UserProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProductsViewController.swift; sourceTree = "<group>"; };
+		92AF505C1ACD979100CE283D /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		92B041D81ACB231D0065CFDA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		92C43F5E1AC99D2E00440EA0 /* MarketApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C43F621AC99D2E00440EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 			children = (
 				92ABF76C1ACADAF30098F99F /* User.swift */,
 				92B041D81ACB231D0065CFDA /* Product.swift */,
+				928F75A71ACD85AD00439E6A /* ApiModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +107,14 @@
 				92F36A3A1ACC3068008B3A43 /* MarketApi-Bridging-Header.h */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		92AF505B1ACD977600CE283D /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				92AF505C1ACD979100CE283D /* ProductCell.swift */,
+			);
+			name = CustomCells;
 			sourceTree = "<group>";
 		};
 		92C43F551AC99D2E00440EA0 = {
@@ -123,6 +140,7 @@
 		92C43F601AC99D2E00440EA0 /* MarketApi */ = {
 			isa = PBXGroup;
 			children = (
+				92AF505B1ACD977600CE283D /* CustomCells */,
 				92ABF76B1ACADAD60098F99F /* Model */,
 				92F36A3E1ACC33F7008B3A43 /* View */,
 				92F36A3F1ACC3403008B3A43 /* Controller */,
@@ -173,6 +191,8 @@
 			children = (
 				92C43F651AC99D2E00440EA0 /* LoginViewController.swift */,
 				92F36A701ACC3F03008B3A43 /* ProfileViewController.swift */,
+				92AF50591ACD94A700CE283D /* UserProductsViewController.swift */,
+				92ABB7D21ACDCCAE00D430F7 /* NewProductViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -336,13 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92ABB7D31ACDCCAE00D430F7 /* NewProductViewController.swift in Sources */,
 				92ABF7711ACAF9710098F99F /* Constants.swift in Sources */,
 				92ABF76F1ACAF94B0098F99F /* ApiSession.swift in Sources */,
 				92C43F661AC99D2E00440EA0 /* LoginViewController.swift in Sources */,
 				92C43F641AC99D2E00440EA0 /* AppDelegate.swift in Sources */,
+				928F75A81ACD85AD00439E6A /* ApiModel.swift in Sources */,
 				92F36A711ACC3F03008B3A43 /* ProfileViewController.swift in Sources */,
 				92ABF76D1ACADAF30098F99F /* User.swift in Sources */,
+				92AF505D1ACD979100CE283D /* ProductCell.swift in Sources */,
 				92B041D91ACB231D0065CFDA /* Product.swift in Sources */,
+				92AF505A1ACD94A700CE283D /* UserProductsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

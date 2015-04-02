@@ -8,4 +8,4 @@
 
 import Foundation
 
-let base_api_url = "http://api.market_api.dev"
+let base_api_url = "http://api.marketapi.dev"
